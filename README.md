@@ -1,3 +1,3 @@
 # ohtuvarasto
 
-![example workflow](https://github.com/modaralgayal/ohtuvarasto/actions/workflows/WORKFLOW-FILE/badge.svg)
+![example workflow](https://github.com/modaralgayal/ohtuvarasto/workflows/CI/badge.svg)
