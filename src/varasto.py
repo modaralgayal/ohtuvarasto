@@ -1,5 +1,13 @@
+"""Exporting this to main"""
+
 class Varasto:
+
+    """ Varasto sisältää kaikki toiminnot sekä antaa kaikki arvot varastointiin liittyen """
+
     def __init__(self, tilavuus, alku_saldo = 0):
+
+        """ Initiating values """
+
         if tilavuus > 0.0:
             self.tilavuus = tilavuus
         else:
@@ -18,9 +26,11 @@ class Varasto:
 
     # huom: ominaisuus voidaan myös laskea. Ei tarvita erillistä kenttää viela_tilaa tms.
     def paljonko_mahtuu(self):
+        """ Tells how much space is left """
         return self.tilavuus - self.saldo
 
     def lisaa_varastoon(self, maara):
+        """ Adding functionality """
         if maara < 0:
             return
         if maara <= self.paljonko_mahtuu():
@@ -29,6 +39,7 @@ class Varasto:
             self.saldo = self.tilavuus
 
     def ota_varastosta(self, maara):
+        """ Functionality for taking from the storage """
         if maara < 0:
             return 0.0
         if maara > self.saldo:
@@ -42,4 +53,5 @@ class Varasto:
         return maara
 
     def __str__(self):
+        """ Return value """
         return f"saldo = {self.saldo}, vielä tilaa {self.paljonko_mahtuu()}"
